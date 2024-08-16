@@ -13,12 +13,14 @@
 .main-nav {
 	background: lighten($secondary, 65%);
 	padding-top: 23px;
+
 	nav {
 		ul li {
 			a {
 				color: lighten($secondary, 35%);
 			}
-			&.active a{
+
+			&.active a {
 				color: lighten($primary, 10%);
 			}
 		}
@@ -26,16 +28,19 @@
 }
 
 .section {
-	&.second{
+	&.second {
 		margin-bottom: 90px;
 	}
+
 	.container {
 		position: relative;
+
 		&:after {
 			position: absolute;
-		    content: url(../img/separator.png);
-		    left: 20px;
+			content: url(../img/separator.png);
+			left: 20px;
 		}
+
 		h1 {
 			text-transform: uppercase;
 			margin-bottom: 30px;
@@ -58,15 +63,74 @@
 		margin: 30px 0px;
 	}
 
+	#typed {
+		white-space: nowrap;
+		display: inline-block;
+		max-width: 100%;
+		font-size: 3rem;
+		transition: font-size 0.2s ease;
+	}
+
 	h1 {
 		&:before {
 			position: absolute;
-			left: -220px;
-			top: -150px;
+			left: -13vw;
+			top: -18vh;
 			font-size: 270px;
 			z-index: -1;
 			color: lighten($secondary, 65%);
 		}
+
+		@media (max-width: 2560px) {
+			&:before {
+				left: -5.5vw;
+				top: -15vh;
+			}
+
+			#typed {
+				font-size: 2.75rem;
+			}
+		}
+
+		@media (max-width: 1440px) {
+			&:before {
+				left: -9.5vw;
+				top: -18vh;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			&:before {
+				left: -13.5vw;
+				top: -18vh;
+			}
+		}
+
+		@media (max-width: 768px) {
+			&:before {
+				left: -18vw;
+				top: -18vh;
+			}
+		}
+
+		@media (max-width: 425px) {
+			&:before {
+				left: -4vw;
+				top: -26vh;
+			}
+
+			#typed {
+				font-size: 2rem;
+			}
+		}
+
+		@media (max-width: 320px) {
+
+			#typed {
+				font-size: 1.5rem;
+			}
+		}
+
 		span {
 			font-size: 47px;
 		}
@@ -81,12 +145,14 @@
 			list-style: none;
 			font-size: em(15);
 			color: lighten($primary, 35%);
+
 			a {
 				padding-bottom: 5px;
 				font-size: em(19);
 				font-weight: 700;
 				text-decoration: none;
 				border-bottom: 1px solid lighten($primary, 50%);
+
 				&:hover {
 					border-bottom: 1px solid $primary;
 				}
@@ -98,6 +164,7 @@
 .award {
 	.award-list {
 		margin-left: 0px;
+
 		li {
 			&:first-child {
 				font-size: em(15);
@@ -110,6 +177,7 @@
 .skills {
 	.skill-list {
 		margin-left: 0px;
+
 		li {
 			&:first-child {
 				font-size: em(15);
@@ -134,10 +202,12 @@
 
 footer {
 	padding: 50px 0px 0px 0px;
+
 	.social {
 		li {
 			display: inline;
 			margin-left: 20px;
+
 			a {
 				font-size: em(20);
 				color: lighten($primary, 40%)
